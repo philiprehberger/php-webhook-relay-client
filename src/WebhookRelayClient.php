@@ -15,10 +15,13 @@ namespace PhilipRehberger\WebhookRelayClient;
 class WebhookRelayClient
 {
     private const DEFAULT_BASE = 'https://api.webhook-relay.dcsuniverse.com';
+
     private const DEFAULT_TIMEOUT_SECONDS = 15;
 
     private readonly string $baseUrl;
+
     private readonly string $apiKey;
+
     private readonly int $timeoutSeconds;
 
     public function __construct(
@@ -73,7 +76,7 @@ class WebhookRelayClient
     // ─── subscriptions ───────────────────────────────────────────────────
 
     /**
-     * @return array<string, mixed>  Subscription with `signing_secret` field — store it now.
+     * @return array<string, mixed> Subscription with `signing_secret` field — store it now.
      */
     public function createSubscription(string $url, ?string $name = null, ?string $eventFilter = null): array
     {
@@ -120,7 +123,7 @@ class WebhookRelayClient
     }
 
     /**
-     * @return array<string, mixed>  Subscription with new `signing_secret`.
+     * @return array<string, mixed> Subscription with new `signing_secret`.
      */
     public function rotateSubscriptionSecret(string $id): array
     {
