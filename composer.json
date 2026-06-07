@@ -1,0 +1,52 @@
+{
+    "name": "philiprehberger/php-webhook-relay-client",
+    "description": "PHP SDK + HMAC verifier for the Webhook Relay API",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "webhook",
+        "webhook-relay",
+        "hmac",
+        "signature",
+        "verify",
+        "api-client"
+    ],
+    "homepage": "https://github.com/philiprehberger/php-webhook-relay-client",
+    "authors": [
+        {
+            "name": "Philip Rehberger",
+            "email": "me@philiprehberger.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "laravel/pint": "^1.0",
+        "phpstan/phpstan": "^1.12|^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhilipRehberger\\WebhookRelayClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhilipRehberger\\WebhookRelayClient\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "lint": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}
